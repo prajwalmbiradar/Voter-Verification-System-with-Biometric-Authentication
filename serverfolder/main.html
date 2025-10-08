@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Voting Status</title>
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+   
+</head>
+
+<body>
+    <div id="ribbon">
+        <div id="ribbon-container">
+            <div id="left-image">
+                <img src="voting logo left.png" alt="">
+            </div>
+            <div id="header">Live votings monitoring dashboard (LVMD)</div>
+            <div id="right-image">
+                <img src="voting logo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="floatbox">
+<h1>Select voting Booth</h1>
+            <form>
+                <div class="selblocks">
+                    <label for="dropdown1">Select State :</label>
+                    <select id="dropdown1" name="dropdown1">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="option1-1">karnataka</option>
+                        <option value="option1-2">telangana</option>
+                        <option value="option1-3">kerala</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="selblocks">
+                    <label for="dropdown2">select District:</label>
+                    <select id="dropdown2" name="dropdown2">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="option2-1">Bijapur</option>
+                        <option value="option2-2">Belgaum</option>
+                        <option value="option2-3">Bangalore rural</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="selblocks">
+                    <label for="dropdown3">Select taluka:</label>
+                    <select id="dropdown3" name="dropdown3">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="option3-1">Devanahalli</option>
+                        <option value="option3-2">Hoskote</option>
+                        <option value="option3-3">Nelamangala</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="selblocks">
+                    <label for="dropdown4">select Gram panchayat:</label>
+                    <select id="dropdown4" name="dropdown4">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="option4-1">Kolattur</option>
+                        <option value="option4-2">Chikkajala</option>
+                        <option value="option4-3">Doddajala</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="selblocks">
+                    <label for="dropdown5">Select ward:</label>
+                    <select id="dropdown5" name="dropdown5">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="option5-1">Ward 1</option>
+                        <option value="option5-2">Ward 2</option>
+                        <option value="option5-3">Ward 3</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="selblocks" style="justify-content: space-around;">
+                    <a href="dashboard.html"><div id="submit"><div>Submit</div></div></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <!---<h1>Live Voting Status</h1>--->
+
+       
+    </div>
+
+    <!-- Firebase and Chart.js Initialization -->
+
+</body>
+<script type="module" src="dashboard.js"></script>
+</html>

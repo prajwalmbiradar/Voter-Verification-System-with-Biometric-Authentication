@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Voting Status</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+      import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <script type="module" src="dashboard.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Voting Status</h1>
+
+        <div class="grid-layout">
+            <div class="chart-container">
+                <canvas id="totalVotesChart"></canvas>
+                <p>Total Votes: <span id="totalVotes"></span></p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="menVotesChart"></canvas>
+                <p>Men Votes</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="womenVotesChart"></canvas>
+                <p>Women Votes</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="totalPercentageChart"></canvas>
+                <p>Total Voting Percentage</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="menPercentageChart"></canvas>
+                <p>Men Voting Percentage</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="womenPercentageChart"></canvas>
+                <p>Women Voting Percentage</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="remainingVotesChart"></canvas>
+                <p>Remaining Votes</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="remainingPercentageChart"></canvas>
+                <p>Remaining Voting Percentage</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase and Chart.js Initialization -->
+   
+</body>
+</html>

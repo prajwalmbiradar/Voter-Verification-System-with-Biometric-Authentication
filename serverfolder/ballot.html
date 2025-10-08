@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ballot.css">
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="ballot.js"></script>
+    <title>ballot unit</title>
+</head>
+
+<body>
+    <div id="viewport">
+        <div class="container">
+            <div class="highbox">
+                <div class="highleft">
+                    <div class="ready">
+                        <div class="caption">Ready</div>
+                        <div class="light" id="glight"></div>
+                    </div>
+                    <div class="ballotpaper">
+                        <div class="balimage">
+                            <img src="symb.png" alt="aa">
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="highright">
+
+                    <div class="latch">
+                        <div class="lr1"></div>
+                        <div class="lr2"></div>
+                        <div class="lr3">
+                            <div class="lrt"></div>
+                        </div>
+                        <div class="lr4">
+                            <div class="lrt" style="float: left; top: 2px;"></div>
+                            <div class="lrt" style="float: right; top: 2px;"></div>
+                        </div>
+                    </div>
+                    <div class="ready" id="bumargin">
+                        <div class="caption">Ballot unit</div>
+                        <div class="numberbox">
+                            <div class="numb">1</div>
+                        </div>
+                    </div>
+                    <div class="votebuttons">
+                        <ul class="listofb">
+                           
+                            <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(1)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="aa">
+                                </div>
+                                <button class="votehere" onclick="su(2)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(3)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(4)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(5)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(6)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(7)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(8)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(9)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(10)"> </button>
+                                <div class="braile"></div>
+                            </li>
+                              
+                    </div>
+                    <div class="bottomlatch">
+                        <div class="lr4">
+                            <div class="lrt" style="float: left; top: -2px;"></div>
+                            <div class="lrt" style="float: right; top: -2px;"></div>
+                        </div>
+                        <div class="lr3">
+                            <div class="lrt"></div>
+                        </div>
+                        <div class="lr2"></div>
+                        <div class="lr1"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="highbox">
+                <div class="highleft">
+                    <div class="ready">
+                        <div class="caption">&nbsp;</div>
+                       
+                    </div> 
+                    <div class="ballotpaper">
+                        <div class="balimage2">
+                            <img src="symb2.png" alt="aa">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="highright">
+
+                    <div class="latch">
+                        <div class="lr1"></div>
+                        <div class="lr2"></div>
+                        <div class="lr3">
+                            <div class="lrt"></div>
+                        </div>
+                        <div class="lr4">
+                            <div class="lrt" style="float: left; top: 2px;"></div>
+                            <div class="lrt" style="float: right; top: 2px;"></div>
+                        </div>
+                    </div>
+                    <div class="ready" id="bumargin">
+                        <div class="caption">Ballot unit</div>
+                        <div class="numberbox">
+                            <div class="numb">2</div>
+                        </div>
+                    </div>
+                    <div class="votebuttons">
+                        <ul class="listofb">
+                        
+                            <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(11)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(12)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(13)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(14)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(15)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere" onclick="su(16)">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere ina" > </button>
+                                <div class="braile"></div>
+                            </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere ina">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere ina">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              <li class="buttonc">
+                                <div class="arr-image">
+                                    <img src="l.png" alt="a">
+                                </div>
+                                <button class="votehere ina">  </button>
+                                <div class="braile"></div>
+                              </li>
+                              
+                    </div>
+                    <div class="bottomlatch">
+                        <div class="lr4">
+                            <div class="lrt" style="float: left; top: -2px;"></div>
+                            <div class="lrt" style="float: right; top: -2px;"></div>
+                        </div>
+                        <div class="lr3">
+                            <div class="lrt"></div>
+                        </div>
+                        <div class="lr2"></div>
+                        <div class="lr1"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <img src="ol2.png" alt="">
+            <div id="port">
+                <div id="paper">
+                    <div id="cname" >1</div>
+                    <div id="symbol">
+                        <img src="s1.jpg" alt="1" id="ss">
+                    </div>
+                   
+                </div>
+                <div id="cover"></div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
