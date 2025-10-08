@@ -4,19 +4,19 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyA5RKC_vSucqyjyvcAcVftRNZx2aiV_adA",
-  authDomain: "votingdata-2481.firebaseapp.com",
-  projectId: "votingdata-2481",
-  storageBucket: "votingdata-2481.appspot.com",
-  messagingSenderId: "830063442127",
-  appId: "1:830063442127:web:2c5600a4224874d9069fba",
-  measurementId: "G-XKQZ43E97B"
+  apiKey: "",
+  authDomain: "votingdata.firebaseapp.com",
+  projectId: "votingdata",
+  storageBucket: "votingdata.appspot.com",
+  messagingSenderId: "8127",
+  appId: "1:83027:web:2c5600a4fba",
+  measurementId: "G-7B"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const database = getDatabase(app, 'https://votingdata-2481-default-rtdb.asia-southeast1.firebasedatabase.app');
+const database = getDatabase(app, 'https://votingdatdefault-rtdb.asia-southeast1.firebasedatabase.app');
 
 // Reference to 'votes' node
 const votesRef = ref(database, 'votes');
