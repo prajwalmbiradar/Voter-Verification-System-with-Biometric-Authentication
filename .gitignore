@@ -1,0 +1,23 @@
+# Ignore Firebase service account key (keep local/private)
+votingdata-2481-firebase-adminsdk-ciuia-1c7172b6d7.json
+
+# Node / general
+node_modules/
+.env
+.DS_Store
+.vscode/
+Thumbs.db
+desktop.ini
+*.log
+*.sqlite
+*.db
+__pycache__/
+
+# Build artifacts
+dist/
+build/
+
+# Private keys and service account patterns
+*.pem
+*firebase-adminsdk*.json
+
